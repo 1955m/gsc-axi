@@ -1,0 +1,56 @@
+{
+  "name": "gsc-axi",
+  "version": "0.1.0",
+  "description": "AXI-compliant Google Search Console CLI — token-efficient TOON output for search analytics (clicks/impressions/CTR/position), sitemaps, URL inspection, and a monitor/health summary for cron regression alerts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1955m/gsc-axi.git"
+  },
+  "keywords": [
+    "google-search-console",
+    "search-console",
+    "gsc",
+    "seo",
+    "cli",
+    "agent",
+    "axi",
+    "toon",
+    "search-analytics",
+    "sitemaps",
+    "url-inspection"
+  ],
+  "bin": {
+    "gsc-axi": "./dist/bin/gsc-axi.js"
+  },
+  "files": [
+    "dist",
+    "skills/gsc-axi",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx bin/gsc-axi.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@toon-format/toon": "^2.1.0",
+    "axi-sdk-js": "^0.1.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
