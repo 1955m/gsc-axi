@@ -2,4 +2,8 @@ node_modules/
 dist/
 .env
 *.log
+# Service-account keys — never commit
 service-account.json
+*-service-account.json
+*.pem
+gsc-monitor/
